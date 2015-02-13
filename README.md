@@ -14,29 +14,56 @@ You don’t have to do anything differently. Just add the files, and you are loc
 To use, just import `UIColor+Flat.m` and `UIColor+Flat.h` into your project, and use `UIColor` as you normally would.
 
 ``` objc
- self.view.backgroundColor = [UIColor redColor];
- ```
+self.view.backgroundColor = [UIColor redColor];
+```
 
 ## Extra Colors
 As well as overriding the stand UIColor methods. A few more colors such as `darkRedColor` have been added. Here is a full list of the colors.
 
 ![All Flat UI Colors](screenshot.png)
 
+``` objc
+ [UIColor blackColor];
+ [UIColor darkGrayColor];
+ [UIColor grayColor];
+ [UIColor lightGrayColor];
+ [UIColor whiteColor];
+ [UIColor yellowColor];
+ [UIColor darkYellowColor];
+ [UIColor orangeColor];
+ [UIColor darkOrangeColor];
+ [UIColor redColor];
+ [UIColor darkRedColor];
+ [UIColor purpleColor];
+ [UIColor darkPurpleColor];
+ [UIColor blueColor];
+ [UIColor darkBlueColor];
+ [UIColor turqoiseColor];
+ [UIColor darkTurqoiseColor];
+ [UIColor greenColor];
+ [UIColor darkGreenColor];
+```
+
 ## Bonus Methods
 A few bonus methods exist in UIColor+Flat.
 
-`- (UIColor *)contrastingColor;`
+``` objc
+- (UIColor *)contrastingColor;
+```
+Will return either `[UIColor blackColor]` or `[UIColor whiteColor]`, depending on which color will contrast most. Great for finding the text color to use on a colored background. *(What I used to color the text in the previous image).* eg.
+`label.textColor = [label.backgroundColor contrastingColor]` 
+or 
+`label.textColor = label.backgroundColor.contrastingColor`
 
-Will return either `[UIColor blackColor]` or `[UIColor whiteColor]`, depending on which color will contrast most. Great for finding the text color to use on a colored background. *(What I used to color the text in the previous image).*
-
-
-`+ (UIColor *)colorFromHex:(UInt32)hex;`
-
+``` objc
++ (UIColor *)colorFromHex:(UInt32)hex;
+```
 Will return the color from a hex value, such as `0x2C3E50`.
 
 
-`+ (UIColor *)colorFromHexString:(NSString*)hexString;`
-
+``` objc
++ (UIColor *)colorFromHexString:(NSString*)hexString;
+```
 Will return a color from a hex string, either `@"#2C3E50"` or `@"2C3E50"`.
 
 
