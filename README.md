@@ -44,6 +44,25 @@ As well as overriding the stand UIColor methods. A few more colors such as `dark
  [UIColor darkGreenColor];
 ```
 
+## Old UIColors
+To use the original colors declared in `UIColor`, simply add the word “true” in front of the name.
+``` objc
+[UIColor trueBlackColor];
+[UIColor trueDarkGrayColor];
+[UIColor trueLightGrayColor];
+[UIColor trueWhiteColor];
+[UIColor trueGrayColor];
+[UIColor trueRedColor];
+[UIColor trueGreenColor];
+[UIColor trueBlueColor];
+[UIColor trueCyanColor];
+[UIColor trueYellowColor];
+[UIColor trueMagentaColor];
+[UIColor trueOrangeColor];
+[UIColor truePurpleColor];
+[UIColor trueBrownColor];
+```
+
 ## Bonus Methods
 A few bonus methods exist in UIColor+Flat.
 
